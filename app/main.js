@@ -52,7 +52,7 @@ const loadMapView = () =>{
 const renderMapViewHeader = () =>{
     const header = document.querySelector('.header');
     header.innerHTML = `<div class="header_top">
-    <img src="../assets/img/logo.png">
+    <img src="/assets/img/logo.png">
     </div>
     <div class="header_bottom">
     <div class="header_text"><span class="fa fa-map-marker"></span><h2> Look for a site </h2> </div><button class="delete">Remove marks</button>
