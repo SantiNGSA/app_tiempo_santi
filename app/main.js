@@ -81,7 +81,7 @@ const renderMap = () =>{
     map = new mapboxgl.Map({
         container: 'el_mapa',
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [mapPosition.lng, mapPosition.lat],
+        center: [-3.5, 40],
         zoom: mapPosition.zoom
         
     });
