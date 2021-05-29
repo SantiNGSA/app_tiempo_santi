@@ -1,0 +1,196 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+
+$corporateColor: tomato;
+$base:8px;
+
+// * {
+//     border: 1px solid $corporateColor;
+   
+// }
+
+html,
+body {
+    min-height: 100vh;
+    .container{
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 150px 1fr auto;
+        overflow: hidden;
+        .header{
+            grid-area: 1 / 1 / span 1 / span 1;
+            background-color: rgb(245, 245, 245);
+        }
+        .main{
+            grid-area: 2 / 1 / span 2 / span 1;
+            
+            background-image: url("https://media.giphy.com/media/26CYzjDCeIns0EZt6/giphy.gif");
+            background-repeat: no-repeat, repeat;
+            background-size: cover;
+            background-position: center;
+            .layer{
+                background-color: rgba(255, 255, 255, 0.795);
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+        .footer{
+            padding: 1rem;
+            grid-area: 4 / 1 / span 1 / span 1;
+            background-color: rgb(61, 61, 61);
+        }
+        
+        .spinner {
+            grid-area: 1 / 1 / -1 / span 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 4;
+        }
+     
+    }
+}
+
+
+
+
+.spinner {
+    visibility: hidden;
+    &.opened {
+        visibility: visible;
+    }
+}
+
+#el_mapa{
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    
+    .header_top{
+        text-align: center;
+        padding:1em 0 1em;
+        img{
+            width: 100px;
+        }
+    }
+    .header_bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:0 1em;
+        padding:0 0 1em;
+        .header_text{
+            display: flex;
+            align-items: center;
+            .fa{
+                font-size: $base*3;
+                margin-right: $base;
+            }
+            h2{
+                font-size: $base*2;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+        button{
+            color:rgb(62, 62, 62);
+            background-color: rgb(245, 245, 245);
+            border:1px solid rgb(184, 184, 184);
+            border-radius: $base;
+            padding: $base $base*3;
+            font-size: $base*2;
+        }
+    }
+    
+    
+}   
+
+.footer{
+    span{
+        color: rgb(245, 245, 245);
+        padding-left: $base;
+    }
+}
+
+.main{
+    .data_top{
+        display: flex;
+        flex-direction: column;
+        .temperatura{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8em;
+            font-weight: 600;
+            padding-left:$base*3;
+        }
+        .data_top_info{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+    }
+    .data_bottom{
+        .minsymaxs{
+            display: flex;
+            justify-content: space-evenly;
+            margin:1em 0 3em;
+            .min{
+                background-color: rgb(61, 61, 61);
+                padding:0.5em 1em;
+                border-radius: $base*3;
+                color: rgb(247, 247, 247);
+
+            }
+            .max{
+                background-color: rgb(61, 61, 61);
+                padding:0.5em 1em;
+                border-radius: $base*3;
+                color: rgb(247, 247, 247);
+            }
+        }
+    }
+  
+}
+.other{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .other_item{
+        width: 70%;
+        background-color:rgb(61, 61, 61) ;
+        color:rgb(247, 247, 247);
+        padding: $base $base*2;
+        border-radius: $base*3;
+        margin-bottom:1em;
+        .fa{
+            padding-right: $base;
+        }
+    }
+}
+.header{
+    .fa-chevron-left{
+        margin:1em 1em 1em 1em;
+        border:none;
+        background-color: rgba(245, 245, 220, 0);
+    }
+}
+.typeweather{
+    background-color: rgb(61, 61, 61);
+    color:rgb(247, 247, 247);
+    padding: $base*3;
+    border-radius: $base*5;
+}
